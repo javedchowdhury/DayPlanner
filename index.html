@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 style="text-align: center;">Work Day Schedular</h1>
+      <p style="text-align: center;">A single calendar app for schedualing your work day</p>
+      <p style="text-align: center;" id="displayMoment"></p>
+      <button id="allSave" class="btn btn-primary" type="submit">Save</button>
+      <button id="clearAll" class="btn btn-primary pull-right" type="submit">Clear All</button>
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 2px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        9:00AM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea1" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+        <textarea class="form-control" id="noteText1" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        10:00AM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea2" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText2" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        11:00AM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea3" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText3" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        12:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea4" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText4" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        1:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea5" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText5" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        2:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea6" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText6" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        3:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea7" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText7" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        4:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea8" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid;">
+
+        <textarea class="form-control" id="noteText8" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"
+        style="background-color: white; text-align: right; border-top: 1px solid; border-right: 1px solid;border-bottom: 1px solid;">
+        5:00PM</div>
+      <div class="col-8" style="background-color: lightgreen;">
+
+        <textarea class="form-control" id="exampleTextarea9" rows="2"
+          style="background-color: rgb(154, 185, 154);"></textarea>
+      </div>
+      <div class="col-2"
+        style="background-color: lightblue; border-top: 1px solid; border-left: 1px solid;border-bottom: 2px solid;">
+
+        <textarea class="form-control" id="noteText9" rows="2" placeholder="write note"
+          style="background-color: rgb(194, 185, 185);"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./scripts.js"></script>
+  <script>
+    (function () {
+
+      var NowMoment = moment().format('LLLL');
+      var eDisplayMoment = document.getElementById('displayMoment');
+      eDisplayMoment.innerHTML = NowMoment;
+
+    })();
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
